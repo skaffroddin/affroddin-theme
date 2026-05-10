@@ -53,8 +53,8 @@
 
         <div>
           <h3 class="text-2xl font-bold text-white">
-            Affroddin
-            <span class="bg-gradient-to-r from-primary to-[#D7FF8A] bg-clip-text text-transparent"> Gupta</span>
+            Aff
+            <span class="bg-gradient-to-r from-primary to-[#D7FF8A] bg-clip-text text-transparent"> roddin</span>
           </h3>
           <p class="text-xs uppercase tracking-widest text-gray-500 mt-1">
             WordPress Developer
