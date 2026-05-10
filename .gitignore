@@ -1,0 +1,61 @@
+# =====================
+# WordPress Theme Ignore
+# =====================
+
+# Node dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build files (optional if you don't want to push compiled assets)
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# IDE settings
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Backup files
+*.bak
+*.swp
+*.tmp
+
+# =====================
+# WordPress Core (DO NOT PUSH CORE)
+# =====================
+wp-admin/
+wp-includes/
+wp-config.php
+.htaccess
+readme.html
+
+# =====================
+# Tailwind / Build (optional rule)
+# =====================
+# If you WANT server to build CSS → keep these files
+# If NOT → uncomment below
+# assets/css/output.css
+
+# =====================
+# Keep theme files (IMPORTANT)
+# =====================
+!style.css
+!index.php
+!functions.php
+!header.php
+!footer.php
+!front-page.php
+!single.php
+!page.php
+!template-parts/
+!assets/
