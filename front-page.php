@@ -2,7 +2,7 @@
 
 
 <!-- Hero -->
-<section class="relative overflow-hidden py-24 bg-[#050816]">
+<section class="relative overflow-hidden min-h-screen flex items-center bg-[#050816] pt-24">
 
   <!-- GRID BACKGROUND -->
   <div class="absolute inset-0 pointer-events-none opacity-40"

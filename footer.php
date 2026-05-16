@@ -1,13 +1,14 @@
 <footer class="relative bg-gradient-to-b from-black via-black to-black text-gray-400 overflow-hidden">
 
   <!-- Neon Glow Background -->
-  <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/10 blur-[120px] animate-pulse"></div>
+  <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/10 blur-[120px] animate-pulse">
+  </div>
   <div class="absolute -bottom-40 right-0 w-[600px] h-[600px] bg-primaryGlow blur-[120px]"></div>
 
   <!-- CTA Section -->
   <section class="relative z-10 border-b border-primary/20 bg-primary/5">
 
-    <div class="max-w-7xl mx-auto px-6 py-16 md:py-24 text-center">
+    <div class="mx-auto max-w-7xl px-4 lg:px-8 py-16 md:py-24 text-center">
 
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-6">
         <span class="text-xs font-semibold text-primary">READY TO START?</span>
@@ -44,17 +45,15 @@
   </section>
 
   <!-- Main Footer Content -->
-  <div class="relative z-10 max-w-7xl mx-auto px-6 py-20">
-
+  <div class="relative z-10 mx-auto max-w-7xl px-4 lg:px-8 py-20">
     <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4 mb-16">
 
       <!-- Brand -->
       <div class="space-y-4">
 
         <div>
-          <h3 class="text-2xl font-bold text-white">
-            Aff
-            <span class="bg-gradient-to-r from-primary to-[#D7FF8A] bg-clip-text text-transparent"> roddin</span>
+          <h3 class="text-2xl font-bold tracking-tight text-white">
+            Aff<span class="bg-gradient-to-r from-[#b7fe50] to-[#D7FF8A] bg-clip-text text-transparent">roddin</span>
           </h3>
           <p class="text-xs uppercase tracking-widest text-gray-500 mt-1">
             WordPress Developer
@@ -123,11 +122,16 @@
 
         <ul class="space-y-3">
 
-          <li><a href="#" class="text-sm text-gray-400 hover:text-primary transition flex items-center gap-2"><span class="text-primary">→</span> About Me</a></li>
-          <li><a href="#" class="text-sm text-gray-400 hover:text-primary transition flex items-center gap-2"><span class="text-primary">→</span> Portfolio</a></li>
-          <li><a href="#" class="text-sm text-gray-400 hover:text-primary transition flex items-center gap-2"><span class="text-primary">→</span> Blog</a></li>
-          <li><a href="#" class="text-sm text-gray-400 hover:text-primary transition flex items-center gap-2"><span class="text-primary">→</span> Testimonials</a></li>
-          <li><a href="#" class="text-sm text-gray-400 hover:text-primary transition flex items-center gap-2"><span class="text-primary">→</span> FAQ</a></li>
+          <li><a href="#" class="text-sm text-gray-400 hover:text-primary transition flex items-center gap-2"><span
+                class="text-primary">→</span> About Me</a></li>
+          <li><a href="#" class="text-sm text-gray-400 hover:text-primary transition flex items-center gap-2"><span
+                class="text-primary">→</span> Portfolio</a></li>
+          <li><a href="#" class="text-sm text-gray-400 hover:text-primary transition flex items-center gap-2"><span
+                class="text-primary">→</span> Blog</a></li>
+          <li><a href="#" class="text-sm text-gray-400 hover:text-primary transition flex items-center gap-2"><span
+                class="text-primary">→</span> Testimonials</a></li>
+          <li><a href="#" class="text-sm text-gray-400 hover:text-primary transition flex items-center gap-2"><span
+                class="text-primary">→</span> FAQ</a></li>
 
         </ul>
       </div>
@@ -151,11 +155,18 @@
 
             <div class="flex gap-3">
 
-              <a class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-primary/20 hover:bg-primary/10 hover:border-primary hover:text-primary transition">𝕏</a>
+              <a
+                class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-primary/20 hover:bg-primary/10 hover:border-primary hover:text-primary transition">𝕏</a>
 
-              <a class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-primary/20 hover:bg-primary/10 hover:border-primary hover:text-primary transition">in</a>
+              <a
+                class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-primary/20 hover:bg-primary/10 hover:border-primary hover:text-primary transition">in</a>
+              <a
+                class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-primary/20 hover:bg-primary/10 hover:border-primary hover:text-primary transition">in</a>
+              <a
+                class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-primary/20 hover:bg-primary/10 hover:border-primary hover:text-primary transition">in</a>
 
-              <a class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-primary/20 hover:bg-primary/10 hover:border-primary hover:text-primary transition">⚙</a>
+              <a
+                class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-primary/20 hover:bg-primary/10 hover:border-primary hover:text-primary transition">⚙</a>
 
             </div>
 
