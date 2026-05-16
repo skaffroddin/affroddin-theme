@@ -42,160 +42,40 @@ get_header();
 
     <!-- GRID -->
     <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-
-      <!-- CARD -->
-      <article class="group rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur hover:border-[#b7fe50]/40 hover:-translate-y-2 transition-all duration-300">
-
-        <!-- THUMBNAIL -->
-        <div class="overflow-hidden">
-          <img src="https://picsum.photos/700/500?1"
-            class="w-full h-60 object-cover group-hover:scale-105 transition duration-500">
-        </div>
-
-        <div class="p-6">
-
-          <span class="inline-block rounded-full bg-[#b7fe50]/10 px-3 py-1 text-xs font-medium text-[#b7fe50] border border-[#b7fe50]/20">
-            Security
-          </span>
-
-          <h3 class="mt-4 text-xl font-semibold text-white group-hover:text-[#b7fe50] transition">
-            How to Detect Malware in WordPress in Seconds
-          </h3>
-
-          <p class="mt-3 text-sm text-white/60 leading-relaxed line-clamp-3">
-            Learn how modern malware scanners detect hidden backdoors,
-            suspicious injections and hacked themes instantly.
-          </p>
-
-          <!-- META -->
-          <div class="mt-6 flex items-center justify-between">
-
-            <div class="flex items-center gap-3">
-              <img src="https://picsum.photos/100?2"
-                class="w-10 h-10 rounded-full border border-white/10">
-
-              <div>
-                <p class="text-sm font-medium text-white">Affroddin</p>
-                <p class="text-xs text-white/50">May 11, 2026</p>
-              </div>
-            </div>
-
-            <a href="#" class="text-[#b7fe50] text-sm font-medium hover:translate-x-1 transition">
-              Read →
-            </a>
-
-          </div>
-
-        </div>
-      </article>
-
-
-      <!-- CARD -->
-      <article class="group rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur hover:border-[#b7fe50]/40 hover:-translate-y-2 transition-all duration-300">
-
-        <div class="overflow-hidden">
-          <img src="https://picsum.photos/700/500?3"
-            class="w-full h-60 object-cover group-hover:scale-105 transition duration-500">
-        </div>
-
-        <div class="p-6">
-
-          <span class="inline-block rounded-full bg-[#b7fe50]/10 px-3 py-1 text-xs font-medium text-[#b7fe50] border border-[#b7fe50]/20">
-            Performance
-          </span>
-
-          <h3 class="mt-4 text-xl font-semibold text-white group-hover:text-[#b7fe50] transition">
-            Core Web Vitals Optimization Guide
-          </h3>
-
-          <p class="mt-3 text-sm text-white/60 leading-relaxed line-clamp-3">
-            Improve LCP, CLS and loading performance using smart asset
-            delivery and server-side optimizations.
-          </p>
-
-          <div class="mt-6 flex items-center justify-between">
-
-            <div class="flex items-center gap-3">
-              <img src="https://picsum.photos/100?4"
-                class="w-10 h-10 rounded-full border border-white/10">
-
-              <div>
-                <p class="text-sm font-medium text-white">Affroddin</p>
-                <p class="text-xs text-white/50">May 9, 2026</p>
-              </div>
-            </div>
-
-            <a href="#" class="text-[#b7fe50] text-sm font-medium hover:translate-x-1 transition">
-              Read →
-            </a>
-
-          </div>
-
-        </div>
-      </article>
-
-
-      <!-- CARD -->
-      <article class="group rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur hover:border-[#b7fe50]/40 hover:-translate-y-2 transition-all duration-300">
-
-        <div class="overflow-hidden">
-          <img src="https://picsum.photos/700/500?5"
-            class="w-full h-60 object-cover group-hover:scale-105 transition duration-500">
-        </div>
-
-        <div class="p-6">
-
-          <span class="inline-block rounded-full bg-[#b7fe50]/10 px-3 py-1 text-xs font-medium text-[#b7fe50] border border-[#b7fe50]/20">
-            WordPress
-          </span>
-
-          <h3 class="mt-4 text-xl font-semibold text-white group-hover:text-[#b7fe50] transition">
-            Building Custom WordPress Themes with Tailwind
-          </h3>
-
-          <p class="mt-3 text-sm text-white/60 leading-relaxed line-clamp-3">
-            Create lightning-fast modern themes using Tailwind CSS and
-            component-driven development workflow.
-          </p>
-
-          <div class="mt-6 flex items-center justify-between">
-
-            <div class="flex items-center gap-3">
-              <img src="https://picsum.photos/100?6"
-                class="w-10 h-10 rounded-full border border-white/10">
-
-              <div>
-                <p class="text-sm font-medium text-white">Affroddin</p>
-                <p class="text-xs text-white/50">May 6, 2026</p>
-              </div>
-            </div>
-
-            <a href="#" class="text-[#b7fe50] text-sm font-medium hover:translate-x-1 transition">
-              Read →
-            </a>
-
-          </div>
-
-        </div>
-      </article>
-
+      <?php
+      if (have_posts()) :
+          while (have_posts()) : the_post();
+              get_template_part('template-parts/blog/card');
+          endwhile;
+      else :
+          echo '<p class="text-white/60 col-span-full text-center">No posts found.</p>';
+      endif;
+      ?>
     </div>
 
+    <!-- PAGINATION -->
+    <div class="mt-20 flex justify-center gap-3 flex-wrap">
+      <?php
+      $links = paginate_links(array(
+          'type'      => 'array',
+          'prev_text' => __('&larr; Prev', 'affroddin'),
+          'next_text' => __('Next &rarr;', 'affroddin'),
+      ));
 
-    <!-- LOAD MORE -->
-    <div class="mt-20 text-center">
-
-      <a href="#"
-        class="inline-flex items-center gap-2 px-8 py-4 rounded-xl
-        bg-gradient-to-r from-[#4d7c0f] to-[#b7fe50]
-        text-black font-semibold
-        shadow-[0_0_25px_rgba(183,254,80,0.25)]
-        hover:shadow-[0_0_40px_rgba(183,254,80,0.45)]
-        hover:-translate-y-1 transition-all">
-
-        Load More Articles →
-      </a>
-
+      if ($links) {
+          foreach ($links as $link) {
+              // Add tailwind classes to the links
+              $link = str_replace("class='page-numbers'", "class='page-numbers px-5 py-2.5 rounded-xl border border-white/10 bg-white/5 text-white/70 hover:bg-white/10 hover:text-white transition font-medium'", $link);
+              $link = str_replace("class=\"page-numbers\"", "class='page-numbers px-5 py-2.5 rounded-xl border border-white/10 bg-white/5 text-white/70 hover:bg-white/10 hover:text-white transition font-medium'", $link);
+              
+              // Handle current page styling
+              $link = str_replace("current", "bg-gradient-to-r from-[#4d7c0f] to-[#b7fe50] text-black border-none font-semibold shadow-[0_0_15px_rgba(183,254,80,0.25)] pointer-events-none", $link);
+              
+              // Output
+              echo $link;
+          }
+      }
+      ?>
     </div>
 
   </div>

@@ -29,9 +29,9 @@
       <!-- content -->
       <div class="relative text-center font-mono max-w-xl px-8">
 
-        <h1 class="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight">
+        <div class="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight">
           Aff<span class="text-[#b7fe50]">roddin</span>.com
-        </h1>
+        </div>
 
         <p class="text-[#b7fe50] text-left mb-3">
           Initializing portfolio...
@@ -69,47 +69,6 @@
 
       </div>
     </div>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-
-        const bar = document.getElementById("loaderBar");
-        const percent = document.getElementById("loaderPercent");
-
-        const step1 = document.getElementById("step1");
-        const step2 = document.getElementById("step2");
-        const step3 = document.getElementById("step3");
-        const step4 = document.getElementById("step4");
-
-
-        const loader = document.getElementById("siteLoader");
-
-        let i = 0;
-        bar.style.width = "100%";
-
-        const interval = setInterval(() => {
-
-          i++;
-          percent.textContent = i + "%";
-
-          if (i === 30) step1.classList.remove("opacity-0");
-          if (i === 65) step2.classList.remove("opacity-0");
-
-          if (i === 100) {
-            step3.classList.remove("opacity-0");
-            clearInterval(interval);
-
-            setTimeout(() => {
-              loader.classList.add("opacity-0", "transition-opacity", "duration-700");
-
-              setTimeout(() => loader.remove(), 700);
-            }, 1000);
-          }
-
-        }, 35);
-
-      });
-    </script>
   <?php endif; ?>
 
   <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 bg-[#050816]/90 backdrop-blur border-b border-white/10">
@@ -228,38 +187,10 @@
       </nav>
     </div>
 
-    <!-- SCRIPT -->
-    <script>
-      const btn = document.getElementById("mobileToggle");
-      const menu = document.getElementById("mobileMenu");
-
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("opacity-0");
-        menu.classList.toggle("invisible");
-        menu.classList.toggle("-translate-y-3");
-        menu.classList.toggle("scale-95");
-      });
-    </script>
-
-    <!-- SCROLL PROGRESS BAR -->
     <div class="absolute bottom-0 left-0 w-full h-[2px] bg-white/5 overflow-hidden">
       <div id="scrollProgress"
         class="h-full w-0 bg-gradient-to-r from-[#4d7c0f] to-[#b7fe50] transition-all duration-75">
       </div>
     </div>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const progress = document.getElementById("scrollProgress");
-
-        window.addEventListener("scroll", function () {
-          const scrollTop = window.scrollY;
-          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-          const scrolled = (scrollTop / docHeight) * 100;
-
-          progress.style.width = scrolled + "%";
-        });
-      });
-    </script>
 
   </header>

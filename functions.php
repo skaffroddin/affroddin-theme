@@ -1,14 +1,13 @@
 <?php
-function affroddin_assets() {
-    wp_enqueue_style(
-        'affroddin-style',
-        get_template_directory_uri() . '/assets/css/output.css'
-    );
-}
-add_action('wp_enqueue_scripts', 'affroddin_assets');
+/**
+ * Affroddin functions and definitions
+ */
 
-function reading_time() {
-    $content = get_post_field('post_content', get_the_ID());
-    $word_count = str_word_count(strip_tags($content));
-    return ceil($word_count / 200);
-}
+// Require theme setup and support features
+require_once get_template_directory() . '/inc/theme-support.php';
+
+// Require enqueuing of scripts and styles
+require_once get_template_directory() . '/inc/enqueue.php';
+
+// Require helper functions
+require_once get_template_directory() . '/inc/helpers.php';
